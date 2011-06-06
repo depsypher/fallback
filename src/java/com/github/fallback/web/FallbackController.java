@@ -26,8 +26,8 @@ import com.github.fallback.entity.FallbackJob;
 /**
  * There are primarily three urls:
  *
- * /start?clientId=234&reportFrom=&reportTo=
- * /check/#
+ * /start?clientId=234&reportFrom=2010-01-01%2011:11:11&reportTo=2010-01-02%2011:11:11
+ * /check/1
  * /details/1,2,3,4
  * /list/STATUS
  *
