@@ -312,10 +312,16 @@
         <!-- find and replace the new project name in relevant files -->
         <replaceregexp match="fallback" replace="${new.project.name}" flags="g" byline="true">
             <fileset file="${new.project.path}/build.xml" />
+            <fileset dir="${new.project.path}/web">
+                <include name="**/web.xml" />
+            </fileset>
         </replaceregexp>
         <replaceregexp match="com.github.fallback" replace="${new.package.name}" flags="g" byline="true">
             <fileset dir="${new.package.path}">
                 <include name="**/*.java" />
+            </fileset>
+            <fileset dir="${new.project.path}/web">
+                <include name="**/*.xml" />
             </fileset>
         </replaceregexp>
     </target>
